@@ -8,5 +8,5 @@ import (
 
 func TestOptions(t *testing.T) {
 	RegisterFailHandler(Fail)
-	RunSpecs(t, "18F/authdelegate Suite")
+	RunSpecs(t, "mbland/authdelegate Suite")
 }
