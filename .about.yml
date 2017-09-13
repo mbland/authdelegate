@@ -75,8 +75,8 @@ stack:
 #     url: URL for the text of the license
 licenses:
   authdelegate:
-    name: CC0
-    url: https://github.com/18F/authdelegate/blob/master/LICENSE.md
+    name: ISC
+    url: https://github.com/mbland/authdelegate/blob/master/LICENSE.md
 
 # Blogs or websites associated with project development
 #blog:
@@ -92,7 +92,7 @@ licenses:
 
 # Email addresses of points-of-contact
 contact:
-- url: mailto:michael.bland@acm.org
+- url: mailto:mbland@acm.org
   text: Mike Bland
-- url: https://github.com/18F/authdelegate/issues
-  text: 18F/authdelegate issues
+- url: https://github.com/mbland/authdelegate/issues
+  text: mbland/authdelegate issues

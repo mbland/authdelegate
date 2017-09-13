@@ -1,8 +1,8 @@
 # authdelegate Authentication Delegate Server
 
-[![Build Status](https://travis-ci.org/18F/authdelegate.svg?branch=master)](https://travis-ci.org/18F/authdelegate)
+[![Build Status](https://travis-ci.org/mbland/authdelegate.svg?branch=master)](https://travis-ci.org/mbland/authdelegate)
 
-[![Coverage Status](https://coveralls.io/repos/18F/authdelegate/badge.svg?branch=master&service=github)](https://coveralls.io/github/18F/authdelegate?branch=master)
+[![Coverage Status](https://coveralls.io/repos/mbland/authdelegate/badge.svg?branch=master&service=github)](https://coveralls.io/github/mbland/authdelegate?branch=master)
 
 A server that routes authenticated requests to multiple authentication
 servers based on the presence of specific headers or cookies in a request.
@@ -16,7 +16,7 @@ and its `auth_request` directive.
 Imagine a static site served by nginx that contains API endpoints that should
 be authenticated both via [bitly/oauth2_proxy](https://github.com/bitly/oauth2_proxy)
 (so normal users can see the JSON in a browser) and via
-[18F/hmacproxy](https://github.com/18F/hmacproxy/) (so that programs can
+[mbland/hmacproxy](https://github.com/mbland/hmacproxy/) (so that programs can
 access the endpoints via HMAC-authenticated requests). This program allows you
 to forward requests to both servers depending on whether any incoming request
 has either an Oauth2 cookie or a header containing an HMAC signature.
@@ -30,7 +30,7 @@ generally.
 For now, install from source:
 
 ```sh
-$ go get github.com/18F/authdelegate
+$ go get github.com/mbland/authdelegate
 ```
 
 ## Configuration and execution
@@ -129,13 +129,3 @@ server {
 If you wish to expose the delegate directly to the public, rather than via an
 Nginx proxy scheme, pass the `-ssl-cert` and `-ssl-key` options along all
 other `-auth` parameters.
-
-## Public domain
-
-This project is in the worldwide [public domain](LICENSE.md). As stated in [CONTRIBUTING](CONTRIBUTING.md):
-
-> This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).
->
-> All contributions to this project will be released under the CC0
->dedication. By submitting a pull request, you are agreeing to comply
->with this waiver of copyright interest.
